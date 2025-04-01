@@ -1,0 +1,33 @@
+import matplotlib.pyplot as plt
+
+# Datos de tamaños (eje X)
+tamaños = [100, 1000, 10000, 100000, 200000]
+
+# Datos de cada método
+directa = [24, 2077, 247969, 28573222, 116995753]
+functores = [33, 3181, 318929, 31973741, 130237138]
+punteros = [34, 3335, 330221, 33129618, 140064776]
+polimorfismo = [35, 3521, 358106, 43707564, 145194775]
+
+# Creamos la figura y los ejes
+plt.figure(figsize=(10, 6))
+
+# Graficamos cada serie de datos
+plt.plot(tamaños, directa, marker='o', label='Directa')
+plt.plot(tamaños, functores, marker='o', label='Functores')
+plt.plot(tamaños, punteros, marker='o', label='Punteros')
+plt.plot(tamaños, polimorfismo, marker='o', label='Polimorfismo')
+
+# Configuramos el título y las etiquetas
+plt.title('Tiempo de ejecución según el método y el tamaño')
+plt.xlabel('Tamaño de la entrada')
+plt.ylabel('Tiempo (unidades de medición)')
+
+# Mostramos la leyenda
+plt.legend()
+
+# Mostramos la cuadrícula
+plt.grid(True)
+
+# Mostramos el gráfico
+plt.show()
